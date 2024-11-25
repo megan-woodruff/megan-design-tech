@@ -163,6 +163,8 @@ a.secondary {
 
 @media (prefers-color-scheme: dark) {
   .logo {
-    filter: invert();
+    // to avoid conflict with sass invert() fn
+    // https://css-tricks.com/when-sass-and-new-css-features-collide/
+    filter: Invert();
   }
 }
